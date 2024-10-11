@@ -34,41 +34,12 @@
     <title>Miracle Garden Set{% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <body data-bs-spy="scroll" data-bs-target="#goTop">
-  
-        <header>
-            <div class="container-fluid" id="heading">
-              <div class="row">
-                  <div class="col d-flex justify-content-center"><a href="index.html" class="navbar-brand " id="logo"><h1>Miracle Garden Set</h1></a></div>
-                  <div class="col d-flex justify-content-center" id="callInfo">
-                          <a href="#" ><i class="fa fa-phone"></i>+447535719467</a>
-                          <a href="#"><i class="fa fa-envelope"></i>maribellepajares2012@gmail.com</a>  
-                  </div>
-             </div>
-           </div>
-           
-           <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid" id="navButtons">
-              <a class="navbar-brand" href="{% url 'home' %}">Home</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link btnNav" href="deals.html">Deals</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link btnNav" href="about.html">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link btnNav" href="Contact.html">Contact Us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link btnNav" href="trackOrder.html">Order Status</a>
-                  </li>
-                </ul>
-              </div>
+    <header class="container-fluid fixed-top">
+        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                    <h2 class="logo-font text-black my-0"><strong>Miracle</strong> Garden Set</h2>
+                </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="">
@@ -122,13 +93,14 @@
           </nav>
         </header>
       </div>
+      </body>
       {% block innercontent %}
       {% endblock %}
     
        <!--Contact & footer-->
-       <section class="p-5" id="contactInfo">
-        <div class="container">
-            <div class="row g-4">
+       <section>
+        <div id="contactInfo">
+            <div class="row ">
     
                 <div class="col-md-4 text-light">
                     <h3 class=" mb-4">Customer Services</h3>
