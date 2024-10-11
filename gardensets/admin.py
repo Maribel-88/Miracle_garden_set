@@ -5,6 +5,7 @@ from .models import Gardenset, Category
 
 class GardensetAdmin(admin.ModelAdmin):
     list_display = (
+        'pk',
         'sku',
         'name',
         'category',
