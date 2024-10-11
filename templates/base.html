@@ -14,24 +14,25 @@
     {% endblock %}
 
     {% block corecss %}
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
-        {% endblock %}
+    {% endblock %}
 
     {% block extra_css %}
     {% endblock %}
 
     {% block corejs %}
-    <script src="https://kit.fontawesome.com/98657bf0c4.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/98657bf0c4.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     {% endblock %}
 
     {% block extra_js %}
     {% endblock %}
 
-    <title>Miracle Garden Set{% block extra_title %}{% endblock %}</title>
+    <title>Miracle Garden Set {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
     <header class="container-fluid fixed-top">
@@ -55,7 +56,6 @@
                     </div>
                 </form>
             </div>
-
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
@@ -79,93 +79,106 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <div id="cartPadding" class="col d-flex justify-content-end">
-                            <a href="cart2.html" >
-                              <div class="cart ">
-                                <i class="bi bi-cart2"></i>
-                                <div id="cartAmount" class="cartAmount">0</div>
-                              </div>
-                            </a>
-                          </div>
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                            <div class="text-center">
+                                <div class="cart " class="col d-flex justify-content-end">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <div id="cartAmount" class="cartAmount">0</div>
+                                </div>
+                                <p class="my-0">
+                                    {% if grand_total %}
+                                        ${{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                        $0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
                     </li>
                 </ul>
             </div>
-          </nav>
-        </header>
-      </div>
-      </body>
-      {% block innercontent %}
-      {% endblock %}
-    
-       <!--Contact & footer-->
-       <section>
-        <div id="contactInfo">
-            <div class="row ">
-    
-                <div class="col-md-4 text-light">
-                    <h3 class=" mb-4">Customer Services</h3>
-                    <div id="customerServices">
-                        <p>
-                            <a href="refund.html"><span class="fw-bold">Refund Policy</span></a> 
-                        </p>
-                        <p>
-                           <a href="terms.html"><span class="fw-bold">Terms</span></a>
-                        </p>
-                        <p>
-                           <a href="trackOrder.html"> <span class="fw-bold">Track My Order</span></a>
-                        <p>
-                        
-                        
-                    </div>
-                </div>
-                <div class="col-md-4 text-light" id="footerInfo">
-                    <h3 class=" mb-4 ">Contact Info</h3>
-                    <div >
-                        <p>
-                            <span class="fw-bold">Location:</span> 21 Fenscape, Whittlesey Peterborough 
-                             PE7 1GS       
-                        </p>
-                        <p>
-                            <a href="#"><span class="fw-bold">Phone no: </span><i class="fa fa-phone"></i> +447535719467</a>
-                        </p>
-                        <p>
-                            <a href="#"><span class="fw-bold">Email:</span> maribellepajares2012@gmail.com</a>
-                        <p>
-                        <p>
-                            <span class="fw-bold">Agent Name:</span> Maribel Pajares
-                        </p>
-                        
-                    </div>
-                </div>
-                
-                <div class="col-md-4 col-sm-12">
-                    <div class="card " id="imgBorder">
-                        <div class="card-body">
-                            <div><img src="images/maribel.jpg" class="rounded-circle mb-3 img-fluid" id="imgFooter" alt=""></div>
-                            <div id="socIcon" class="mb-3">
-                            <a href="https://www.facebook.com/maribel.pajares.7" class="fa fa-facebook"></a>
-                            <a href="#" class="fa fa-twitter"></a>
-                            <a href="#" class="fa fa-google"></a>
-                            <a href="#" class="fa fa-youtube"></a>
-                            <a href="#" class="fa fa-linkedin"></a>
-                            </div>
-                        </div>
-                    </div>
-    
+        </div>
+        <div class="row bg-white" id="navbarlinks">
+            <nav class="navbar navbar-expand-lg navbar-light w-100">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                {% include 'includes/mobile-top-header.html' %}
+                {% include 'includes/main-nav.html' %}
+            </nav>
+        </div>
+        <div id="delivery-banner" class="row text-center">
+            <div class="col bg-black text-white">
+                <h4 class="logo-font my-1">Free delivery on orders over ${{ free_shipping_threshold }}!</h4>                
+            </div>            
+        </div>
+    </header>
+
+    <!--Contact & footer-->
+   <section>
+    <div class="contactInfo fixed-bottom">
+        <div class="row">
+
+            <div class="col-md-4 text-black">
+                <h3 class=" mb-4 logo-font">Customer Services</h3>
+                <div id="customerServices">
+                    <p>
+                        <a href="refund.html"><span class="fw-bold text-black">Refund Policy</span></a> 
+                    </p>
+                    <p>
+                       <a href="terms.html"><span class="fw-bold text-black">Terms</span></a>
+                    </p>
+                    <p>
+                       <a href="trackOrder.html"> <span class="fw-bold text-black">Track My Order</span></a>
+                    <p>
+                    
+                    
                 </div>
             </div>
+            <div class="col-md-4 logo-font" id="footerInfo">
+                <h3 class=" mb-4 text-black">Contact Info</h3>
+                <div >
+                    <p class="text-black">
+                        <span class="fw-bold text-black">Location:</span> 21 Fenscape, Whittlesey Peterborough 
+                         PE7 1GS       
+                    </p>
+                    <p class="text-black">
+                        <a href="#"><span class="fw-bold text-black">Phone no: </span><i class="fa fa-phone"></i> +447535719467</a>
+                    </p>
+                    <p class="text-black">
+                        <a href="#"><span class="fw-bold text-black">Email:</span> maribellepajares2012@gmail.com</a>
+                    <p>
+                    <p class="text-black">
+                        <span class="fw-bold text-black">Agent Name:</span> Maribel Pajares
+                    </p>
+                    
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-sm-12">
+                <div class="card " id="imgBorder">
+                    <div class="card-body">
+                        <div class="d-flex"><img src="/media/maribel (3).jpg" class="rounded-circle mb-3 img-fluid" id="imgFooter" alt=""></div>
+                        <div id="socIcon" class="mb-3">
+                        <a href="https://www.facebook.com/maribel.pajares.7" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-google"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </section>
-      <!--to top-->
-      <div id="goTop">
-        <a href="#heading" id="goTopBtn"><i class="bi bi-arrow-up-square-fill"></i></a>
-      </div>
-      
-      <footer>
-        <div id="footer" class="text-center fixed-bottom text-light">    
-      <p>Copyright &copy; 2024 Miracle Garden Set, 21 Whittlesey, Peterborough, UK PE71GS</p>
-        </div>
-    </footer>
+    </div>
+  </section>
+
+  <footer>
+    <div id="footer" class="text-center fixed-bottom text-light">    
+  <p>Copyright &copy; 2024 Maribelle Garden Set, 21 Whittlesey, Peterborough, UK PE71GS</p>
+    </div>
+</footer>
 
     {% if messages %}
         <div class="message-container"></div>

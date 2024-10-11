@@ -4,164 +4,80 @@ html {
 
 body {
     background: url('/media/background.jpg') no-repeat center center fixed;
-    background-size:cover;
-    height: calc(100vh );
+    background-size: cover;
+    height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
 }
 
-i {
-    cursor: pointer;
-}
-
-a {
-    text-decoration: none;
-    color:#fff;
-}
-/*-----------------Heading Navbar -----------------------*/
-
-#topnav { 
-    background-color: #8c240a;
+#topnav {
     background: linear-gradient(to bottom right, red, yellow);
-    padding: 25px 60px;
-    color: #fff;
 }
 
-#navButtons a {
-    color:#000;
-    row-gap: 20px;
+#navbarlinks {
+    border: solid 1px transparent;
+    background: linear-gradient(to bottom right, red, yellow);
+    height: 38px;
+    padding-bottom: 20px;
 }
 
-#navButtons a:hover {
-    color:green;
-}
-
-
-#navbarNavDropdown ul li a:hover {
-    color:green;
-}
-
-#heading {
-    background-color: #8c240a;
-}
-
-#heading div a:hover {
-   color:green;
-}
-
-#heading div i {
-    color: #fff;  
-}
-
-
-
-.btnNav:hover, #myBtn:hover {
+#navbarlinks a:hover {
     border-radius: 15px;
     border: solid 1px transparent;
     background: linear-gradient(to bottom right, red, yellow);
     height: 38px;
 }
 
-#myBtn {
-    border-radius: 15px;
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
 }
 
-#callInfo {
-    
-    text-align: center;  
-    flex-direction: column; 
-    display:inline-block;
-} 
-
-.text-black {
-    color: white!important;
-    
-}
-
-.shop-now-button {
-    background: #8c240a;
-    color: white;
-    min-width: 260px;
+.logo-font {
+    text-transform: uppercase;
 }
 
 .main-logo-link {
     width: fit-content;
 }
 
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
 .border-black {
     border: 1px solid black !important;
 }
 
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-    .container {
-      max-width: 80%;
-    }
-  }
-  
-  /* fixed top navbar only on medium and up */
-  @media (min-width: 992px) {
-      .fixed-top-desktop-only {
-          position: fixed;
-          top: 0;
-          right: 0;
-          left: 0;
-          z-index: 1030;
-      }
-  
-      .header-container {
-          padding-top: 164px;
-      }
-  }
-/*----------------- Deals Page ---------------------*/
-
-#deal1 {
-    display: flex;
+.bg-black {
+    background: #8c240a !important;
 }
 
-#deal2 {
-    flex: 33.33%;
-  
-}
-
-/*--------------------- Footer Page ---------------------------*/
-
-#imgBorder {
-    background-color: #8c240a;
-    border-style: none;
-   
-}
-
-.contact_background {
-    background-color: #8c240a;
-
-}
-
-#contactInfo
- {
-    
-    background-color: #8c240a;
-    margin-bottom: -164px;
-    padding: 15px;
-}
-    
-#footer {  
-    text-align: center;
-    background-color: #710d10;
-    margin-bottom: 0;  
-    padding-bottom: 5px;
-    padding-top: 5px;
-}
-
-#customerServices a:hover {
-    color:green;
-}
-
-#imgFooter {
-   width: 200px;
-}
-
-/*----------------------------- Cart Page --------------------------*/
 .cart {
     position: relative;
     background-color: #fff;
@@ -185,20 +101,48 @@ a {
     border-radius: 3px;
 }
 
-/* Shop items styles are here */
-
-.shop {
-    display: grid;
-    grid-template-columns: repeat(4, 254px);
-    gap:60px;
-    justify-content: center;
-    margin-bottom: 45px;
-    margin-top: 45px;
-    
+.contactInfo {
+    background-color: #8c240a;
+   margin-top: 600px;
+   padding-top: 5px;
+   position: fixed-bottom;
+   
 }
 
+#footer {  
+    text-align: center;
+    background-color: #710d10;
+    margin-bottom: -5px;  
+    padding-bottom: 2px;
+    padding-top: 5px;
+    margin-top: 0px;
+}
 
-  /*-----------------Social Media Icons ------------*/
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+/*-----------------Social Media Icons ------------*/
    
   
 
@@ -258,4 +202,13 @@ a {
     color:green;
   }
 
+  #imgFooter {
+    width: 50px;
+    height: 50px;
+  }
   
+  #imgBorder{
+    background-color: #8c240a;
+    border-style: none;
+    align-items: center;
+  }
