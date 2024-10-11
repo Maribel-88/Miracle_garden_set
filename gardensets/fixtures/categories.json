@@ -1,0 +1,27 @@
+[
+    {
+        "pk": 1,
+        "model": "gardensets.category",
+        "fields": {
+            "name": "rectangular_tables",
+            "basic_name": "Rectangular Table Set"
+        }
+    },
+  {
+    "pk": 2,
+    "model": "gardensets.category",
+    "fields": {
+      "name": "round_tables",
+      "basic_name": "Round Table Sets"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "gardensets.category",
+    "fields": {
+      "name": "kalesa_set",
+      "basic_name": "Kalesa Table Sets"
+    }
+  }
+    
+]

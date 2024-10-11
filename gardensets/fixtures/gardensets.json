@@ -1,0 +1,120 @@
+[
+  {
+    "pk": 1,
+    "model": "gardensets.gardenset",
+    "fields": {
+      "sku": "rec1001",
+      "name": "Table Set 1001",
+      "description": "Table set with two stools and a bench",
+      "price": 9000.00,
+      "category": 3,
+      "rating": 4.6,
+      "image_url": ";wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+      "image": "kalesa.jpg"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "gardensets.gardenset",
+    "fields": {
+      "sku": "rec2",
+      "name": "Table Set 2",
+      "description": "Table set with two kalesa bench",
+      "price": 9000.00,
+      "category": 3,
+      "rating": 4.6,
+      "image_url": ";wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+      "image": "rec2.jpg"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "gardensets.gardenset",
+    "fields": {
+      "sku": "rec202",
+      "name": "Table Set 202",
+      "description": "Table set with two stools and two kalesa bench with umbrella",
+      "price": 9000.00,
+      "category": 3,
+      "rating": 4.6,
+      "image_url": ";wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+      "image": "rec202.jpg"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "gardensets.gardenset",
+    "fields": {
+      "sku": "rec2002",
+      "name": "Table Set 2002",
+      "description": "Table set with two stools and two bench",
+      "price": 9000.00,
+      "category": 3,
+      "rating": 4.6,
+      "image_url": ";wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+      "image": "rec2002.jpg"
+    }
+
+  },
+  {
+    "pk": 5,
+    "model": "gardensets.gardenset",
+    "fields": {
+      "sku": "cir100",
+      "name": "Table Set 100",
+      "description": "Table set with two stools",
+      "price": 9000.00,
+      "category": 2,
+      "rating": 4.6,
+      "image_url": ";wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+      "image": "whitecir.jpg"
+    }
+
+  },
+  {
+    "pk": 6,
+    "model": "gardensets.gardenset",
+    "fields": {
+      "sku": "cir1002",
+      "name": "Table Set 1001",
+      "description": "Table set with two stools wood-like",
+      "price": 9000.00,
+      "category": 2,
+      "rating": 4.6,
+      "image_url": ";wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+      "image": "woodcir.jpg"
+    }
+
+  },
+  {
+    "pk": 7,
+    "model": "gardensets.gardenset",
+    "fields": {
+      "sku": "cir2001",
+      "name": "Table Set 2001",
+      "description": "Table set with two stools marble-like",
+      "price": 9000.00,
+      "category": 2,
+      "rating": 4.6,
+      "image_url": ";wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+      "image": "marblecir.jpg"
+    }
+
+  },
+  {
+    "pk": 8,
+    "model": "gardensets.gardenset",
+    "fields": {
+      "sku": "rec301",
+      "name": "Table Set 301",
+      "description": "Table set with two stools and a bench",
+      "price": 9000.00,
+      "category": 1,
+      "rating": 4.6,
+      "image_url": ";wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+      "image": "rec301.jpg"
+    }
+
+  }
+  
+]
