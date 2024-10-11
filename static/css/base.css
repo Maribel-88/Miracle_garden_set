@@ -78,6 +78,10 @@ body {
     background: #8c240a !important;
 }
 
+.shoplink {
+    margin-top: 500px;
+}
+
 .cart {
     position: relative;
     background-color: #fff;
@@ -105,7 +109,7 @@ body {
     background-color: #8c240a;
    margin-top: 600px;
    padding-top: 5px;
-   position: fixed-bottom;
+   margin-bottom: -500px;
    
 }
 
