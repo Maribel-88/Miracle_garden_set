@@ -23,10 +23,17 @@ body {
 
 #navbarlinks a:hover {
     border-radius: 15px;
-    border: solid 1px transparent;
-    background: linear-gradient(to bottom right, red, yellow);
+    border: solid 1px white;
+    background: transparent;
     height: 38px;
 }
+
+.dropdown-item {
+    border: solid 1px transparent;
+    background:  whitesmoke;
+    height: 38px;
+}
+
 
 /* from Bulma */
 .icon {
