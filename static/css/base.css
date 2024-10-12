@@ -89,6 +89,11 @@ body {
     margin-top: 500px;
 }
 
+a.category-badge > span.badge:hover {
+    background: #8c240a;
+    color: #fff;
+}
+
 .overlay {
     height: 100%;
     width: 100%;

@@ -30,6 +30,13 @@
                 <div class="product-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ gardenset.name }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">${{ gardenset.price }}</p>
+                    {% if gardenset.category %}
+                    <p class="small mt-1 mb-0">
+                        <a class="text-muted" href="{% url 'gardensets' %}?category={{ gardenset.category.name}}">
+                            <i class="fas fa-tag mr-1"></i> {{ gardenset.category.basic_name}}     
+                        </a> 
+                    </p>
+                    {% endif %}
                     {% if gardenset.rating %}
                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ gardenset.rating }} / 5</small>
                     {% else %}
