@@ -52,3 +52,15 @@ def all_garden_sets(request):
         'current_sorting': current_sorting,
     }
     return render(request, 'gardensets/gardensets.html', context)
+
+
+def gardenset_detail(request, gardenset_id):
+    """ A view that will return the details of the specific garden set """
+
+    gardenset = get_object_or_404(Gardenset, pk=gardenset_id)
+
+    context = {
+        'gardenset': gardenset,
+    }
+
+    return render(request, 'gardensets/gardenset_detail.html', context)

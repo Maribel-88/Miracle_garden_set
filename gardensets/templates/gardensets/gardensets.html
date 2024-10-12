@@ -26,11 +26,11 @@
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card  border-0">
                                 {% if gardenset.image %}
-                                <a href="">
+                                <a href="{% url 'gardenset_detail' gardenset.id %}">
                                     <img class="card-img-top" width="100" height="450"  src="{{ gardenset.image.url }}" alt="{{ gardenset.name }}">
                                 </a>
                                 {% else %}
-                                <a href="">
+                                <a href="{% url 'gardenset_detail' gardenset.id %}">
                                     <img class="card-img-top" width="100" height="450" src="{{ MEDIA_URL }}noimage.png" alt="{{ gardenset.name }}">
                                 </a>
                                 {% endif %}
