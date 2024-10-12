@@ -94,6 +94,18 @@ a.category-badge > span.badge:hover {
     color: #fff;
 }
 
+.btt-button {
+    height:42px;
+    width:42px;
+    position:fixed;
+    bottom:50px;
+    right:10px;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
 .overlay {
     height: 100%;
     width: 100%;
