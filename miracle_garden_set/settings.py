@@ -74,6 +74,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'cart.contexts.cart_contents', 
             ],
         },
     },
@@ -161,3 +162,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-maribel88-miraclegarden-qw21oi81err.ws-eu116.gitpod.io']
+
+FREE_DELIVERY_THRESHOLD = 550 
+STANDARD_DELIVERY_PERCENTAGE = 10
