@@ -109,7 +109,14 @@ a.category-badge > span.badge:hover {
 .btn-outline-black {
     background: white;
     color:#8c240a;
-    border: 1px solid 8c240a;
+    border: 1px solid #8c240a;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background:#8c240a;
+    color:#fff;
 }
 
 .overlay {
@@ -120,29 +127,6 @@ a.category-badge > span.badge:hover {
     position:fixed;
     background: white;
     z-index: -1;
-}
-
-.cart {
-    position: relative;
-    background-color: #fff;
-    color: black;
-    font-size: 20px;
-    padding: 5px;
-    border-radius: 4px;
-    margin-top: 5px;
-    margin-right: 20px;
-
-}
-
-.cartAmount {
-    position:absolute;
-    top: -15px;
-    right: -10px;
-    font-size: 16px;
-    background-color: red;
-    color: white;
-    padding: 3px;
-    border-radius: 3px;
 }
 
 .contactInfo {

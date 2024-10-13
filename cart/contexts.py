@@ -1,11 +1,24 @@
 from decimal import Decimal
 from django.conf import settings
+from django.shortcuts import get_object_or_404
+from gardensets.models import Gardenset
 
 def cart_contents(request):
 
     cart_items = []
     total = 0
     gardenset_count = 0
+    cart = request.session.get('cart', {})
+
+    for item_id, quantity in cart.items():
+        gardenset = get_object_or_404(Gardenset, pk=item_id)
+        total += quantity * gardenset.price
+        gardenset_count += quantity
+        cart_items.append({
+            'item_id': item_id,
+            'quantity': quantity,
+            'gardenset': gardenset,
+        })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
@@ -13,8 +26,9 @@ def cart_contents(request):
     else:
         delivery = 0
         free_delivery_delta = 0
+    
     grand_total = delivery + total
-
+    
     context = {
         'cart_items': cart_items,
         'total': total,
@@ -26,4 +40,3 @@ def cart_contents(request):
     }
 
     return context
-    
