@@ -85,9 +85,6 @@ body {
     background: #8c240a !important;
 }
 
-.shoplink {
-    margin-top: 500px;
-}
 
 a.category-badge > span.badge:hover {
     background: #8c240a;
@@ -203,11 +200,11 @@ a.category-badge > span.badge:hover {
     body {
         height: calc(100vh - 116px);
     }
+
 }
 
 /*-----------------Social Media Icons ------------*/
-   
-  
+    
 
 .fa-facebook {
     background: #3B5998;
