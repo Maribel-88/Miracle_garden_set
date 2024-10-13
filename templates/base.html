@@ -80,6 +80,14 @@
                     </li>
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
+                            <div id="cartPadding" class="col d-flex justify-content-end">
+                                <a href="{% url 'view_cart' %}" >
+                                  <div class="cartIcon ">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <div id="cartAmount" class="cartAmount">{{ gardenset_count }}</div>
+                                  </div>
+                                </a>
+                              </div>
                             <div class="text-center">
                                 <p class="my-0">
                                     {% if grand_total %}
