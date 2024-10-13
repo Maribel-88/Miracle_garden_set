@@ -5,7 +5,7 @@ html {
 body {
     background: url('/media/background.jpg') no-repeat center center fixed;
     background-size: cover;
-    
+    height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
 }
@@ -143,6 +143,23 @@ a.category-badge > span.badge:hover {
     padding-bottom: 2px;
     padding-top: 5px;
     margin-top: 0px;
+}
+
+/* -------------------------------------------- bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
 }
 
 
