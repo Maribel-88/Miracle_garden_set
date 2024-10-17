@@ -17,7 +17,7 @@ def cache_checkout_data(request):
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
-            'bag': json.dumps(request.session.get('bag', {})),
+            'cart': json.dumps(request.session.get('cart', {})),
             'save_info': request.POST.get('save_info'),
             'username': request.user,
         })
@@ -52,14 +52,14 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_cart = json.dumps(cart)
             order.save()
-            for item_id, item_data in cart.items():
+            for item_id, quantity in cart.items():
                 try:
                     gardenset = Gardenset.objects.get(id=item_id)
-                    if isinstance(item_data, int):
+                    if isinstance(quantity, int):
                         order_line_item = OrderLineItem(
                             order=order,
                             gardenset=gardenset,
-                            quantity=item_data,
+                            quantity=quantity,
                         )
                         order_line_item.save()
                 except Gardenset.DoesNotExist:
