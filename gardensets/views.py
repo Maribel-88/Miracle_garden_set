@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+
 from .models import Gardenset, Category
 from .forms import GardenForm
 
@@ -69,8 +71,13 @@ def gardenset_detail(request, gardenset_id):
     return render(request, 'gardensets/gardenset_detail.html', context)
 
 
+@login_required
 def add_gardenset(request):
     """ Add a new garden set to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'This action needs permission from admin')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = GardenForm(request.POST, request.FILES)
         if form.is_valid():
@@ -90,8 +97,13 @@ def add_gardenset(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_gardenset(request, gardenset_id):
     """ Edit a garden set in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'This action needs permission from admin')
+        return redirect(reverse('home'))
+
     gardenset = get_object_or_404(Gardenset, pk=gardenset_id)
     if request.method == 'POST':
         form = GardenForm(request.POST, request.FILES, instance=gardenset)
@@ -112,3 +124,16 @@ def edit_gardenset(request, gardenset_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_gardenset(request, gardenset_id):
+    """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'This action needs permission from admin')
+        return redirect(reverse('home'))
+        
+    gardenset = get_object_or_404(Gardenset, pk=product_id)
+    gardenset.delete()
+    messages.success(request, 'Garden set deleted!')
+    return redirect(reverse('gardensets'))
