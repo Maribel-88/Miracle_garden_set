@@ -88,3 +88,27 @@ def add_gardenset(request):
     }
 
     return render(request, template, context)
+
+
+def edit_gardenset(request, gardenset_id):
+    """ Edit a garden set in the store """
+    gardenset = get_object_or_404(Gardenset, pk=gardenset_id)
+    if request.method == 'POST':
+        form = GardenForm(request.POST, request.FILES, instance=gardenset)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated the gardenset!')
+            return redirect(reverse('gardenset_detail', args=[gardenset.id]))
+        else:
+            messages.error(request, 'Failed to update the garden set. Please ensure the form is valid.')
+    else:
+        form = GardenForm(instance=gardenset)
+        messages.info(request, f'You are editing {gardenset.name}')
+
+    template = 'gardensets/edit_gardenset.html'
+    context = {
+        'form': form,
+        'gardenset': gardenset,
+    }
+
+    return render(request, template, context)
