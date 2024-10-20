@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Gardenset, Category
+from .forms import GardenForm
 
 # Create your views here.
 
@@ -66,3 +67,14 @@ def gardenset_detail(request, gardenset_id):
     }
 
     return render(request, 'gardensets/gardenset_detail.html', context)
+
+
+def add_gardenset(request):
+    """ Add a new garden set to the store """
+    form = GardenForm()
+    template = 'gardensets/add_gardenset.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
