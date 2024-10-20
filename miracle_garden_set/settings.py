@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-^a0*h$tbwdku#!7(t4eeqi!bgzwgibes%6y&9cha(+8qq3&&le
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-maribel88-miraclegarden-pc2ee15ncit.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['8000-maribel88-miraclegarden-nw9owvv20s3.ws.codeinstitute-ide.net']
 
 
 # Application definition
@@ -176,7 +176,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-maribel88-miraclegarden-pc2ee15ncit.ws.codeinstitute-ide.net']
+CSRF_TRUSTED_ORIGINS = ['https://8000-maribel88-miraclegarden-nw9owvv20s3.ws.codeinstitute-ide.net']
 
 # Stripe
 FREE_DELIVERY_THRESHOLD = 50
