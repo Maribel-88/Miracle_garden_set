@@ -71,7 +71,17 @@ def gardenset_detail(request, gardenset_id):
 
 def add_gardenset(request):
     """ Add a new garden set to the store """
-    form = GardenForm()
+    if request.method == 'POST':
+        form = GardenForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added new Garden set!')
+            return redirect(reverse('add_gardenset'))
+        else:
+            message.error(request, 'Failed to add new item. Please ensure the form is valid.')
+    else:
+        form = GardenForm()
+        
     template = 'gardensets/add_gardenset.html'
     context = {
         'form': form,

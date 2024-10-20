@@ -39,7 +39,11 @@
                         {% for item in cart_items %}
                             <tr>
                                 <td class="p-3 w-25">
-                                    <img class="img-fluid rounded" src="{{ item.gardenset.image.url }}">
+                                    {% if item.gardenset.image %}
+                                    <img class="img-fluid rounded" src="{{ item.gardenset.image.url }}" alt="{{ item.gardenset.name }}">
+                                    {% else %}
+                                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.gardenset.name }}">
+                                    {% endif %}
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0"><strong>{{ item.gardenset.name }}</strong></p>
