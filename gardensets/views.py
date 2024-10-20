@@ -76,7 +76,7 @@ def add_gardenset(request):
         if form.is_valid():
             gardenset = form.save()
             messages.success(request, 'Successfully added new Garden set!')
-            return redirect(reverse('gardenset_detail', args=[gardenset.id]))
+            return redirect(reverse('add_gardenset'))
         else:
             message.error(request, 'Failed to add new item. Please ensure the form is valid.')
     else:
@@ -112,11 +112,3 @@ def edit_gardenset(request, gardenset_id):
     }
 
     return render(request, template, context)
-
-
-def delete_gardenset(request, gardenset_id):
-    """ Delete a garden set from the store """
-    gardenset = get_object_or_404(Gardenset, pk=gardenset_id)
-    gardenset.delete()
-    messages.success(request, 'Garden set deleted!')
-    return redirect(reverse('gardensets'))
