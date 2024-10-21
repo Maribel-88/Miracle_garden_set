@@ -124,13 +124,13 @@ class StripeWH_Handler:
                     original_cart=cart,
                     stripe_pid=pid,
                 )
-                for item_id, quantity in json.loads(cart).items():
+                for item_id, item_data in json.loads(cart).items():
                     gardenset = Gardenset.objects.get(id=item_id)
-                    if isinstance(quantity, int):
+                    if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
                             gardenset=gardenset,
-                            quantity=quantity,
+                            quantity=item_data,
                         )
                         order_line_item.save()
                     

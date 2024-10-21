@@ -54,14 +54,14 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_cart = json.dumps(cart)
             order.save()
-            for item_id, quantity in cart.items():
+            for item_id, item_data in cart.items():
                 try:
                     gardenset = Gardenset.objects.get(id=item_id)
-                    if isinstance(quantity, int):
+                    if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
                             gardenset=gardenset,
-                            quantity=quantity,
+                            quantity=item_data,
                         )
                         order_line_item.save()
                 except Gardenset.DoesNotExist:
@@ -85,7 +85,7 @@ def checkout(request):
         
         current_cart = cart_contents(request)
         total = current_cart['grand_total']
-        stripe_total = round(total *100)
+        stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(
             amount=stripe_total,

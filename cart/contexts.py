@@ -10,13 +10,13 @@ def cart_contents(request):
     gardenset_count = 0
     cart = request.session.get('cart', {})
 
-    for item_id, quantity in cart.items():
+    for item_id, item_data in cart.items():
         gardenset = get_object_or_404(Gardenset, pk=item_id)
-        total += quantity * gardenset.price
-        gardenset_count += quantity
+        total += item_data * gardenset.price
+        gardenset_count += item_data
         cart_items.append({
             'item_id': item_id,
-            'quantity': quantity,
+            'quantity': item_data,
             'gardenset': gardenset,
         })
 
