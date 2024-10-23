@@ -8,10 +8,13 @@ body {
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
+    padding-bottom: 100px; 
 }
+
 
 #topnav {
     background: linear-gradient(to bottom right, red, yellow);
+    padding-top: 20px;
 }
 
 #navbarlinks {
@@ -97,6 +100,7 @@ a.category-badge > span.badge:hover {
     position:fixed;
     bottom:50px;
     right:10px;
+    margin-bottom: 5px;
 }
 
 .btt-link,
@@ -118,6 +122,31 @@ a.category-badge > span.badge:hover {
     color:#fff;
 }
 
+.cartIcon {
+    position: relative;
+    background-color: #fff;
+    color: black;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-right: 20px;
+
+}
+
+
+.cartAmount {
+    position:absolute;
+    top: -15px;
+    right: -10px;
+    font-size: 16px;
+    background-color: red;
+    color: white;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+
 .overlay {
     height: 100%;
     width: 100%;
@@ -136,14 +165,24 @@ a.category-badge > span.badge:hover {
    
 }
 
-#footer {  
+.myFooter{
     text-align: center;
     background-color: #710d10;
-    margin-bottom: -5px;  
-    padding-bottom: 2px;
-    padding-top: 5px;
-    margin-top: 0px;
+    margin-bottom: 0;  
+    padding-bottom: 5px;
+    padding-top: 50px;
+    
 }
+
+.navRow {
+    background: linear-gradient(to bottom right, red, yellow);
+}
+
+.product-container {
+    padding-bottom: 80px;
+}
+
+
 
 /* -------------------------------------------- bootstrap toasts */
 
@@ -307,6 +346,7 @@ a.category-badge > span.badge:hover {
     border-radius: 0;
 }
 
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -329,6 +369,10 @@ a.category-badge > span.badge:hover {
     .header-container {
         padding-top: 164px;
     }
+
+    .table-responsive  {
+        padding-bottom: 100px;
+    }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -341,8 +385,30 @@ a.category-badge > span.badge:hover {
         height: calc(100vh - 116px);
     }
 
-}
+    .table-responsive  {
+        padding-bottom: 100px;
+    }
 
+
+}
+    
+@media (max-width: 600px) {
+    .table-responsive  {
+        padding-bottom: 100px;
+    }
+
+    .myFooter {
+        padding-top: 80px;
+    }
+    .product-container {
+        padding-bottom: 80px;
+    }
+
+    .btt-button {
+        margin-bottom: 35px;
+    }
+
+}
 /*-----------------Social Media Icons ------------*/
     
 

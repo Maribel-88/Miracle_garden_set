@@ -41,7 +41,7 @@
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0"><strong>Miracle</strong> Garden Set</h2>
+                    <h2 class="logo-font text-black my-0"><strong>Miracle</strong>Garden Set</h2>
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -81,7 +81,7 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}">
                             <div id="cartPadding" class="col d-flex justify-content-end">
                                 <a href="{% url 'view_cart' %}" >
                                   <div class="cartIcon ">
@@ -89,7 +89,7 @@
                                     <div id="cartAmount" class="cartAmount">{{ gardenset_count }}</div>
                                   </div>
                                 </a>
-                              </div>
+                            </div>
                             <div class="text-center">
                                 <p class="my-0">
                                     {% if grand_total %}
@@ -104,7 +104,7 @@
                 </ul>
             </div>
         </div>
-        <div class="row bg-white" id="navbarlinks">
+        <div class="row navRow">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -119,73 +119,6 @@
             </div>            
         </div>
     </header>
-    {% block innercontent %}
-    {% endblock %}
-    <!--Contact & footer-->
-   <section>
-    <div class="contactInfo fixed-bottom">
-        <div class="row">
-
-            <div class="col-md-4 text-black">
-                <h3 class=" mb-4 logo-font">Customer Services</h3>
-                <div id="customerServices">
-                    <p>
-                        <a href="refund.html"><span class="fw-bold text-black">Refund Policy</span></a> 
-                    </p>
-                    <p>
-                       <a href="terms.html"><span class="fw-bold text-black">Terms</span></a>
-                    </p>
-                    <p>
-                       <a href="trackOrder.html"> <span class="fw-bold text-black">Track My Order</span></a>
-                    <p>
-                    
-                    
-                </div>
-            </div>
-            <div class="col-md-4 logo-font" id="footerInfo">
-                <h3 class=" mb-4 text-black">Contact Info</h3>
-                <div >
-                    <p class="text-black">
-                        <span class="fw-bold text-black">Location:</span> 21 Fenscape, Whittlesey Peterborough 
-                         PE7 1GS       
-                    </p>
-                    <p class="text-black">
-                        <a href="#"><span class="fw-bold text-black">Phone no: </span><i class="fa fa-phone"></i> +447535719467</a>
-                    </p>
-                    <p class="text-black">
-                        <a href="#"><span class="fw-bold text-black">Email:</span> maribellepajares2012@gmail.com</a>
-                    <p>
-                    <p class="text-black">
-                        <span class="fw-bold text-black">Agent Name:</span> Maribel Pajares
-                    </p>
-                    
-                </div>
-            </div>
-            
-            <div class="col-md-4 col-sm-12">
-                <div class="card " id="imgBorder">
-                    <div class="card-body">
-                        <div class="d-flex"><img src="/media/maribel (3).jpg" class="rounded-circle mb-3 img-fluid" id="imgFooter" alt=""></div>
-                        <div id="socIcon" class="mb-3">
-                        <a href="https://www.facebook.com/maribel.pajares.7" class="fa fa-facebook"></a>
-                        <a href="#" class="fa fa-twitter"></a>
-                        <a href="#" class="fa fa-google"></a>
-                        <a href="#" class="fa fa-youtube"></a>
-                        <a href="#" class="fa fa-linkedin"></a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-  </section>
-
-  <footer>
-    <div id="footer" class="text-center fixed-bottom text-light">    
-  <p>Copyright &copy; 2024 Maribelle Garden Set, 21 Whittlesey, Peterborough, UK PE71GS</p>
-    </div>
-</footer>
 
     {% if messages %}
         <div class="message-container">
@@ -217,6 +150,10 @@
     </script>
     {% endblock %}
 
-    
+    <footer class="myFooter text-center fixed-bottom">
+        <div id="footer" class="text-center fixed-bottom text-light">    
+      <p>Copyright &copy; 2024 Maribelle Garden Set, 21 Whittlesey, Peterborough, UK PE71GS</p>
+        </div>
+    </footer>
   </body>
 </html>
