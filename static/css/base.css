@@ -17,15 +17,15 @@ body {
     padding-top: 20px;
 }
 
-#navbarlinks {
+/* .navbar-nav {
     border: solid 1px transparent;
     background: linear-gradient(to bottom right, red, yellow);
     height: 38px;
     padding-bottom: 20px;
-}
+} */
 
-#navbarlinks a:hover {
-    border-radius: 15px;
+.navbar-nav li a:hover{
+    border-radius: 0px;
     border: solid 1px white;
     background: transparent;
     height: 38px;
@@ -54,6 +54,11 @@ body {
 .main-logo-link {
     width: fit-content;
 }
+
+.logo_link a:hover {
+    background: linear-gradient(to bottom right, red, yellow);
+}
+
 
 .shop-now-button {
     background: black;
