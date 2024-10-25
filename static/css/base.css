@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/background.jpg') no-repeat center center fixed;
+    background: url('/media/park-65999_1280.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -24,11 +24,17 @@ body {
     padding-bottom: 20px;
 } */
 
-.navbar-nav li a:hover{
+.navbar-nav li a:hover {
     border-radius: 0px;
     border: solid 1px white;
     background: transparent;
     height: 38px;
+}
+
+.logo_myAccount ul i:hover{
+    border-radius: 0px;
+    background: transparent;
+    height: 20px;
 }
 
 .dropdown-item {
@@ -66,8 +72,17 @@ body {
     min-width: 260px;
 }
 
-.btn-black {
-    background: black;
+.btn-grey {
+    display:flex;
+    justify-content: center;
+    background: grey;
+    color: white;
+    width: 10px;
+   
+}
+
+.btn-add {
+    background: #e6a247;
     color: white;
 }
 
