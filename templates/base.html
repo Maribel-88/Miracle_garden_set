@@ -118,6 +118,9 @@
         </div>
     </header>
 
+    {% block innercontent %}
+    {% endblock %} 
+    
     {% if messages %}
         <div class="message-container">
             {% for message in messages %}

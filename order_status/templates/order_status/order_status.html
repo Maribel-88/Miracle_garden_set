@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+        <div class="container mb-2 myCart">
+            <div class="row">
+                <div class="col">
+                    <hr>
+                    <h2 class="logo-font mb-4">Shopping Bag</h2>
+                    <hr>
+                </div>
+            </div>
+                
+            <div class="col-6 py-lg-0">
+                <p>Use the input below to check your order status.</p>
+                <form method="POST" action="{% url 'gardensets' %}">
+                    <div class="input-group ">
+                        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Place your Order number">
+                        <div class="input-group-append">
+                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                Check
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
