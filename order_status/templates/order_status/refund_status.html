@@ -15,13 +15,13 @@
             <div class="row">
                 <div class="col">
                     <hr>
-                    <h2 class="logo-font mb-4">Order Status</h2>
+                    <h2 class="logo-font mb-4">Refund Status</h2>
                     <hr>
                 </div>
             </div>
               
             <div class="col-12 col-lg-6 my-auto py-1 py-lg-0">
-                <p>Use the input below to check your order status.</p>
+                <p>Use the input below to check your refund status.</p>
                 <form method="GET" action="{% url 'order_status' %}">
                     
                     {{ form|crispy }}
@@ -44,7 +44,7 @@
                             <tr>
                                 <th>Order Number</th>
                                 <th>Date</th>
-                                <th>Tracking Number</th>
+                                <th>Refund Status</th>
                                 
                             </tr>
                         </thead>
