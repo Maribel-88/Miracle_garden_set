@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.conf import settings
 
 from .forms import OrderForm
-from .models import Order, OrderLineItem
+from .models import Order, OrderLineItem, Lists_order
 from gardensets.models import Gardenset
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
@@ -63,6 +63,14 @@ def checkout(request):
                             gardenset=gardenset,
                             quantity=item_data,
                         )
+                        order_list = Lists_order(
+                            order_number = order.order_number,
+                            user_profile = order.user_profile,
+                            order_to_be_delivered = gardenset,
+                            full_name = order.full_name,
+                            email = order.email,
+                        )
+                        order_list.save()
                         order_line_item.save()
                 except Gardenset.DoesNotExist:
                     messege.error(request, (

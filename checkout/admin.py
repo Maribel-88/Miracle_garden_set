@@ -1,6 +1,6 @@
 
 from django.contrib import admin
-from .models import Order, OrderLineItem
+from .models import Order, OrderLineItem, Lists_order
 
 
 class OrderLineItemAdminInline(admin.TabularInline):
@@ -29,4 +29,18 @@ class OrderAdmin(admin.ModelAdmin):
 
     ordering = ('-date',)
 
+class Lists_orderAdmin(admin.ModelAdmin):
+    list_display = (
+        'order_number',
+        'user_profile',
+        'full_name',
+        'email',
+        'order_to_be_delivered', 
+        'date',
+        'dispatched_status',
+        'tracking_number',
+        
+    )
+
+admin.site.register(Lists_order,Lists_orderAdmin)    
 admin.site.register(Order, OrderAdmin)

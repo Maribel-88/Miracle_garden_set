@@ -66,6 +66,8 @@ class OrderLineItem(models.Model):
     gardenset = models.ForeignKey(Gardenset, null=False, blank=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, blank=False, editable=False)
+   
+
 
     def save(self, *args, **kwargs):
         """
@@ -77,3 +79,22 @@ class OrderLineItem(models.Model):
 
     def __str__(self):
         return f'SKU {self.gardenset.sku} on order {self.order.order_number}'
+
+
+class Lists_order (models.Model):
+    order_number = models.CharField(max_length=32, null=False, editable=False)
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, 
+                                    null=True, blank=True, related_name='order_number')
+    email = models.EmailField(max_length=254, null=False, blank=False, default='')
+    full_name = models.CharField(max_length=50, null=False, blank=False, default='')                              
+    order_to_be_delivered = models.TextField(Gardenset, null=False, blank=False, default='')
+    date = models.DateTimeField(auto_now_add=True)
+    dispatched_status = models.BooleanField(default=False)
+    tracking_number = models.TextField(null=False, blank=False, default='')
+
+    def __str__(self):
+        return self.order_number
+
+    def order_date(self):
+        return self.date
+
