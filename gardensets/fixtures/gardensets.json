@@ -9,7 +9,7 @@
       "price": 9000.00,
       "category": 3,
       "rating": 4.6,
-      "image_url": ";wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+      "image_url": "",
       "image": "kalesa.jpg"
     }
   },
@@ -23,7 +23,7 @@
       "price": 9000.00,
       "category": 3,
       "rating": 4.6,
-      "image_url": ";wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+      "image_url": "",
       "image": "rec2.jpg"
     }
   },
@@ -37,7 +37,7 @@
       "price": 9000.00,
       "category": 3,
       "rating": 4.6,
-      "image_url": ";wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+      "image_url": "",
       "image": "rec202.jpg"
     }
   },
@@ -51,7 +51,7 @@
       "price": 9000.00,
       "category": 3,
       "rating": 4.6,
-      "image_url": ";wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+      "image_url": "",
       "image": "rec2002.jpg"
     }
 
