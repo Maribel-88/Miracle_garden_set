@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['https://miraclegarden-set-90121c199093.herokuapp.com/', 'local
 # Application definition
 
 INSTALLED_APPS = [
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
