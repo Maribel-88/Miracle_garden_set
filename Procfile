@@ -1,0 +1,1 @@
+web: gunicorn miracle_garden_set.ado.wsgi:application
