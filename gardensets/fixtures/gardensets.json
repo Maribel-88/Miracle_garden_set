@@ -9,8 +9,8 @@
       "price": 7500.00,
       "category": 3,
       "rating": 4.6,
-      "image_url": "",
-      "image": "kalesa_2_jLM6d6s.jpg"
+      "image_url": "https://mymiraclegarden-set.s3.eu-north-1.amazonaws.com/media/kalesa_2_jLM6d6s.jpg",
+      "image": "s3://mymiraclegarden-set/media/kalesa_2_jLM6d6s.jpg"
     }
   },
   {
