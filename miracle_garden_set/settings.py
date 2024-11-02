@@ -126,7 +126,11 @@ WSGI_APPLICATION = 'miracle_garden_set.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL')),
+        'NAME': 'vest_lived_juicy_558888',
+        'USERNAME': 'uasueu2wiv8',
+        'PASSWORD': 'JHZskScchNBL',
+        'HOST': 'ep-gentle-mountain-a23bxz6h-pooler.eu-central-1.aws.neon.tech',
     }
 else:
     DATABASES = {
