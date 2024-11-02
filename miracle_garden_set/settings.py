@@ -126,14 +126,9 @@ WSGI_APPLICATION = 'miracle_garden_set.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': {
-            'ENGINE': dj_database_url.parse(os.environ.get('DATABASE_URL')),
-            'NAME': os.environ.get('NAME'),
-            'USERNAME': os.environ.get('USERNAME'),
-            'PASSWORD': os.environ.get('PASSWORD'),
-            'HOST': os.environ.get('HOST'),
+            'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-  }
+  
 else:
     DATABASES = {
         'default': {
