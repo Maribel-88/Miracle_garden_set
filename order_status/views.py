@@ -39,11 +39,11 @@ def refund_status(request):
     def filter_list(orderlists):
         for orderlist in orderlists:
             if orderlist.canceled_order:
-                orderlist = Lists_refund (
+                orderlist = Lists_refund(
                     order_number=orderlist.order_number,
                     canceled_order = orderlist.canceled_order
-                )
-             orderlist.save()
+                    )
+            orderlist.save()
     query = None
 
     if 'q' in request.GET:
