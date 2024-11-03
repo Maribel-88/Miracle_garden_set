@@ -36,17 +36,8 @@ def refund_status(request):
     """ A view to return the index page """
 
     orderlists = Lists_order.objects.all()
-    
-    def filter_list(orderlists):
-        for orderlist in orderlists:
-            if orderlist.canceled_order:
-                orderlist = Lists_refund(
-                    order_number=orderlist.order_number,
-                    canceled_order = orderlist.canceled_order
-                    )
-            orderlist.save()
     query = None
-
+    
     if 'q' in request.GET:
         query = request.GET['q']
         if not query:
