@@ -91,6 +91,8 @@ class Lists_order (models.Model):
     date = models.DateTimeField(auto_now_add=True)
     dispatched_status = models.BooleanField(default=False)
     tracking_number = models.TextField(null=False, blank=False, default='')
+    canceled_order = models.BooleanField(default=False)
+    returned_status = models.BooleanField(default=False)
 
     def __str__(self):
         return self.order_number

@@ -9,7 +9,7 @@
     {% block body %}
 
     {% if messages %}
-    <div>
+    <div col-12 col-md-6>
       <strong>Messages:</strong>
       <ul>
         {% for message in messages %}
@@ -19,7 +19,7 @@
     </div>
     {% endif %}
 
-    <div>
+    <div col-12 col-md-6>
       <strong>Menu:</strong>
       <ul>
         {% if user.is_authenticated %}

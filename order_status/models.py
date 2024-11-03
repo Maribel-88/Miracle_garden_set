@@ -9,7 +9,7 @@ class Lists_refund(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
     email = models.EmailField(max_length=254, null=False, blank=False, default='')
     full_name = models.CharField(max_length=50, null=False, blank=False, default='')                              
-    order_to_be_cancelled = models.TextField(Gardenset, null=False, blank=False, default='')
+    canceled_order = models.BooleanField(default=False)
     date = models.DateTimeField(auto_now_add=True)
     refund_status = models.BooleanField(default=False)
     refund_number = models.CharField(max_length=32, null=False, editable=False)

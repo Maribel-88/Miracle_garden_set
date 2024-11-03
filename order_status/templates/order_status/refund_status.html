@@ -22,7 +22,7 @@
               
             <div class="col-12 col-lg-6 my-auto py-1 py-lg-0">
                 <p>Use the input below to check your refund status.</p>
-                <form method="GET" action="{% url 'order_status' %}">
+                <form method="GET" action="{% url 'refund_status' %}">
                     
                     {{ form|crispy }}
                     <div class="input-group ">
@@ -36,6 +36,17 @@
                 </form>
             </div>
             
+            <div class="col-12 col-md-6 order-md-first">
+                <p class="text-muted mt-3 text-center text-md-left">
+                    {% if search_term  == 'None_None' %}
+                        <span class="small display:none"><a href="{% url 'order_refund' %}">Refund Status</a> | </span>
+                        {{ orderlists|length }} Order 
+                    {% elif search_term %}
+                    <span class="small display:none"><a href="{% url 'order_status' %}">Order Status</a> | </span>
+                        {{ orderlists|length }} Order found for <strong>"{{ search_term }}"</strong>{% endif %}
+                </p>
+            </div>
+
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Order History</p>
                 <div class="order-history table-responsive">
@@ -44,28 +55,47 @@
                             <tr>
                                 <th>Order Number</th>
                                 <th>Date</th>
-                                <th>Refund Status</th>
+                                <th>Refund Status {{orderlists}}</th>
                                 
                             </tr>
                         </thead>
                         <tbody>
                             {% for order in orderlists %}
-                                {% if order.order_number == search_term %}
-                                    <tr>
-                                        <td>
-                                            <a href="{% url 'order_history' order.order_number %}"
-                                            title="{{ order.order_number }}">
-                                                {{ order.order_number|truncatechars:6 }}
-                                            </a>
-                                        </td>
-                                        <td>{{ order.date }}</td>
-                                        <td>
-                                            {{ order.tracking_number }}
-                                        </td>
-                                        <td>{{ order.grand_total }}</td>
-                                    </tr>
-                                {% endif %}
-                            {% endfor %}
+                                    {% if search_term == order.order_number  %}
+                                        <tr>
+                                            <td>
+                                                <a href="{% url 'order_history' order.order_number %}"
+                                                title="{{ order.order_number }}">
+                                                    {{ order.order_number|truncatechars:6 }}
+                                                </a>
+                                            </td>
+                                            <td>{{ order.date }} </td>
+                                            {% if order.returned_status %}
+                                            <td>
+                                                <div>
+                                                    <p>Your refund is on process.We will email<br> 
+                                                        you once your refund has been fulfilled.</p>
+                                                </div>
+                                            </td>
+                                            {% elif order.canceled_order %}
+                                            <td>
+                                                <div>
+                                                    <p>We are attempting to cancel your order. We will email you <br> 
+                                                        once we have an update regarding your request.</p>
+                                                </div>
+                                            </td>
+                                            {% else %}
+                                            <td>
+                                                <div>
+                                                    <p>Your order is being prepared for dispatched. We will email<br> 
+                                                       you once we have an update regarding your request.</p>
+                                                </div>
+                                            </td>
+                                            {% endif %}
+                                        </tr>
+                                    {% endif %}
+                                {% endfor %}
+                               
                         </tbody>
                     </table>
                 </div>

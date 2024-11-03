@@ -10,7 +10,7 @@
       "category": 3,
       "rating": 4.6,
       "image_url": "https://mymiraclegarden-set.s3.eu-north-1.amazonaws.com/media/kalesa_2_jLM6d6s.jpg",
-      "image": "s3://mymiraclegarden-set/media/kalesa_2_jLM6d6s.jpg"
+      "image": "kalesa_2_jLM6d6s.jpg"
     }
   },
   {
@@ -20,7 +20,7 @@
       "sku": "rec2",
       "name": "Table Set 2",
       "description": "Table set with two kalesa bench",
-      "price": 9000.00,
+      "price": 8500.00,
       "category": 3,
       "rating": 4.6,
       "image_url": "",
@@ -48,11 +48,11 @@
       "sku": "rec2002",
       "name": "Table Set 2002",
       "description": "Table set with two stools and two bench",
-      "price": 9000.00,
+      "price": 8500.00,
       "category": 3,
       "rating": 4.6,
       "image_url": "",
-      "image": "rec2002.jpg"
+      "image": "golden_kalesa.png"
     }
 
   },
@@ -63,7 +63,7 @@
       "sku": "cir100",
       "name": "Table Set 100",
       "description": "Table set with two stools",
-      "price": 9000.00,
+      "price": 3800.00,
       "category": 2,
       "rating": 4.6,
       "image_url": "https://mymiraclegarden-set.s3.eu-north-1.amazonaws.com/media/whitecir.jpg",
@@ -75,14 +75,14 @@
     "pk": 6,
     "model": "gardensets.gardenset",
     "fields": {
-      "sku": "cir1002",
-      "name": "Table Set 1001",
+      "sku": "cir9002",
+      "name": "Table Set 1002",
       "description": "Table set with two stools wood-like",
-      "price": 9000.00,
+      "price": 3800.00,
       "category": 2,
       "rating": 4.6,
       "image_url": "",
-      "image": "woodcir.jpg"
+      "image": "round_table_w_4_chairs.png"
     }
 
   },
@@ -93,7 +93,7 @@
       "sku": "cir2001",
       "name": "Table Set 2001",
       "description": "Table set with two stools marble-like",
-      "price": 9000.00,
+      "price": 4000.00,
       "category": 2,
       "rating": 4.6,
       "image_url": "",
@@ -108,11 +108,26 @@
       "sku": "rec301",
       "name": "Table Set 301",
       "description": "Table set with two stools and a bench",
-      "price": 9000.00,
+      "price": 7800.00,
       "category": 1,
       "rating": 4.6,
       "image_url": "",
-      "image": "rec301.jpg"
+      "image": "cir102.jpg"
+    }
+
+  },
+  {
+    "pk": 9,
+    "model": "gardensets.gardenset",
+    "fields": {
+      "sku": "rec70002",
+      "name": "Crown Table Set",
+      "description": "Table set with two stools and two bench",
+      "price": 8500.00,
+      "category": 3,
+      "rating": 4.6,
+      "image_url": "",
+      "image": "square_2_kalesa.png"
     }
 
   }

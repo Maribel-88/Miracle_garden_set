@@ -35,7 +35,19 @@
                     </div>
                 </form>
             </div>
-            
+
+            <div class="col-12 col-md-6 order-md-first">
+                <p class="text-muted mt-3 text-center text-md-left">
+                    {% if search_term  == 'None_None' %}
+                        <span class="small display:none"><a href="{% url 'order_status' %}">Order Status</a> | </span>
+                        {{ orderlists|length }} Order 
+                    
+                    {% elif search_term %}
+                    <span class="small display:none"><a href="{% url 'order_status' %}">Order Status</a> | </span>
+                        {{ orderlists|length }} Order found for <strong>"{{ search_term }}"</strong>{% endif %}
+                </p>
+            </div>
+
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Order History</p>
                 <div class="order-history table-responsive">
@@ -48,27 +60,38 @@
                                 
                             </tr>
                         </thead>
-                        <tbody>
-                            {% for order in orderlists %}
-                                {% if order.order_number == search_term %}
-                                    <tr>
-                                        <td>
-                                            <a href="{% url 'order_history' order.order_number %}"
-                                            title="{{ order.order_number }}">
-                                                {{ order.order_number|truncatechars:6 }}
-                                            </a>
-                                        </td>
-                                        <td>{{ order.date }}</td>
-                                        <td>
-                                            {{ order.tracking_number }}
-                                        </td>
-                                        <td>{{ order.grand_total }}</td>
-                                    </tr>
-                                {% endif %}
-                            {% endfor %}
+    
+                        <tbody> 
+                                {% for order in orderlists %}
+                                    {% if search_term == order.order_number  %}
+                                        <tr>
+                                            <td>
+                                                <a href="{% url 'order_history' order.order_number %}"
+                                                title="{{ order.order_number }}">
+                                                    {{ order.order_number|truncatechars:6 }}
+                                                </a>
+                                            </td>
+                                            <td>{{ order.date }}</td>
+                                            {% if order.tracking_number %}
+                                            <td>
+                                                {{ order.tracking_number }}
+                                            </td>
+                                            {% else %}
+                                            <td>
+                                                <div>
+                                                    <p>Your order is on process.We will email you <br> 
+                                                        once your order has been dispatched.</p>
+                                                </div>
+                                            </td>
+                                            {% endif %}
+                                        </tr>
+                                    {% endif %}
+                                {% endfor %}
+                               
                         </tbody>
                     </table>
                 </div>
             </div>
+        
         </div>  
 {% endblock %}

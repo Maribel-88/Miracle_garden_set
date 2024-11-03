@@ -21,10 +21,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', '')
+#SECRET_KEY = os.environ.get('SECRET_KEY', '')
+SECRET_KEY = '$f#_u1(1e=ubo1n=#2sn@v5(amp!d255bcj(3x=4v(0=rt6ilo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 #'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['*']
@@ -124,21 +125,17 @@ WSGI_APPLICATION = 'miracle_garden_set.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL')),
-        'NAME': 'vest_lived_juicy_558888',
-        'USERNAME': 'uasueu2wiv8',
-        'PASSWORD': 'JHZskScchNBL',
-        'HOST': 'ep-gentle-mountain-a23bxz6h-pooler.eu-central-1.aws.neon.tech',
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
+#if 'DATABASE_URL' in os.environ:
+DATABASES = {
+    'default': dj_database_url.parse(' postgres://uasueu2wiv8:JHZskScchNBL@ep-gentle-mountain-a23bxz6h-pooler.eu-central-1.aws.neon.tech/vest_lived_juicy_558888')
+ }
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#         }
+#     }
 
 
 # Password validation

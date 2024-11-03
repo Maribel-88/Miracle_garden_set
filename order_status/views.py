@@ -1,14 +1,15 @@
 from django.shortcuts import render,redirect,reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from checkout.models import Order, Lists_order
-
+from checkout.models import Order, Lists_order 
+from .models import Lists_refund
 # Create your views here.
 
 
 def order_status(request):
     """ A view to return the index page """
 
+    
     orderlists = Lists_order.objects.all()
     
     query = None
@@ -18,11 +19,11 @@ def order_status(request):
         if not query:
             messages.error(request, "No search result")
             return redirect (reverse('order_status'))
-        
+
+    
         queries = Q(order_number__icontains=query) 
         orderlists = orderlists.filter(queries)
 
-   
     context = {
         'orderlists': orderlists,
         'search_term': query,
@@ -35,6 +36,14 @@ def refund_status(request):
 
     orderlists = Lists_order.objects.all()
     
+    def filter_list(orderlists):
+        for orderlist in orderlists:
+            if orderlist.canceled_order:
+                orderlist = Lists_refund(
+                    order_number=orderlist.order_number,
+                    canceled_order = orderlist.canceled_order
+                    )
+            orderlist.save()
     query = None
 
     if 'q' in request.GET:
@@ -42,11 +51,10 @@ def refund_status(request):
         if not query:
             messages.error(request, "No search result")
             return redirect (reverse('order_status'))
-        
+
         queries = Q(order_number__icontains=query) 
         orderlists = orderlists.filter(queries)
 
-   
     context = {
         'orderlists': orderlists,
         'search_term': query,

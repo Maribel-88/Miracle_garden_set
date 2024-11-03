@@ -35,11 +35,11 @@ class Lists_orderAdmin(admin.ModelAdmin):
         'user_profile',
         'full_name',
         'email',
-        'order_to_be_delivered', 
         'date',
         'dispatched_status',
         'tracking_number',
-        
+        'canceled_order',
+        'returned_status',
     )
 
 admin.site.register(Lists_order,Lists_orderAdmin)    
