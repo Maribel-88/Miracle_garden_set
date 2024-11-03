@@ -1,131 +1,50 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<div align="center">https://miraclegarden-set-90121c199093.herokuapp.com/</div>
 
-Welcome Maribel Pajares,
+## **Miracle Garden Set**
+ A website project created to showcase what I have learnt so far from course modules.
+ This dynamic website is composed of eight pages , the Home page, About, Contact, Deals, Refund, Terms, Order Status  and the Cart/basket page.
+ In all the pages there are buttons that customers can click in order to go the the desired page. This website is built with customer in mind.
+ I am looking for the web visitors to be able to view my products and be able to instantly placed there order. Phones numbers and email of the owner 
+ is available for easy reached and to be able to process their order quicker or even to follow-up the orders.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+ ### [Home Page](https://miraclegarden-set-90121c199093.herokuapp.com/)
+ In the home page , I have implemented some bootstrap , HTML , CSS and small bit of Javascript in order to
+ make the page more interactive and user friendly. Bootstrap icons made  the web page more engaging.
+ I have showcase the products in the home page. I use CSS to design the box/grid where  I placed the items or product.
+ I used some Javascript code in order to add items to the cart. The footer in the web page is simply done with HTML code.
+ In this page , customer will view all the available products and prices. They will be able to add to cart their desired items 
+ by clicking the plus icon  and minus icon to reduce the quantity or even delete the items from the cart.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+  <div align="center"><img width="700" alt="Home Page" src="https://github.com/user-attachments/assets/27474864-bfce-4f22-93f1-c9be88f0cb2e"></div>
 
-## Gitpod Reminders
+  ---
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+  ### [Garden Set Page](https://miraclegarden-set-90121c199093.herokuapp.com/gardensets/)
+This the main page of the website. It contains all the products and services that are available to all users. 
 
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
-
-### Connecting your Mongo database
-
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**June 18, 2024,** Add Mongo back into template
-
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
-
-**May 28 2024:** Fix Mongo and Links installs
-
-**April 26 2024:** Update node version to 16
-
-**September 20 2023:** Update Python version to 3.9.17.
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+<div align="center"><img width="700" alt="Main Product Page" src="https://github.com/user-attachments/assets/81bc8b20-5d92-4795-b7cb-d9781dfdc033"></div>
 
 ---
 
-Happy coding!
+### [Garden Set Detail Page](https://miraclegarden-set-90121c199093.herokuapp.com/gardensets/2/)
+Each garden product has their own product detail page. In the main page where all products are displayed , when user clicks to each each it will take them to 
+its product individual detail page. This page contains the title, price and description of the product. On this page user have the option to add the product to the shopping
+cart.
+
+ <div align="center"><img width="700" alt="Garden Set Details" src="https://github.com/user-attachments/assets/7b59e732-ef7d-4eec-a72f-2d366245aeb4"></div>
+
+ ---
+
+ ### [Refund Status Page](https://miraclegarden-set-90121c199093.herokuapp.com/order_status/refund/)
+This page will let the user check the status of their refund request. 
+
+<div align="center"><img width="700" alt="Refund Page" src="https://github.com/user-attachments/assets/91b96bd5-616e-4171-9bbf-7134d9049e33"></div>
+
+---
+
+ ### [Order Status Page](https://miraclegarden-set-90121c199093.herokuapp.com/order_status/)
+This page will let the user check the status of their order. 
+
+<div align="center"><img width="700" alt="Order Status" src="https://github.com/user-attachments/assets/c59a8985-bb9f-462e-8d46-72ed9c3ba65f"></div>
+
+---
