@@ -24,5 +24,17 @@ class Lists_refund(models.Model):
     def __str__(self):
         return self.order_number
 
+    def save(self, *args, **kwargs):
+        """
+        Override the original save method to set the order number
+        if it hasn't been set already.
+        """
+        if not self.refund_number:
+            self.refund_number = self._generate_refund_number()
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.order_number    
+
     def order_date(self):
         return self.date
