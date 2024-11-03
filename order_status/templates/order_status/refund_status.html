@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+und{% extends "base.html" %}
 {% load static %}
 
 {% block page_header %}
@@ -22,7 +22,7 @@
               
             <div class="col-12 col-lg-6 my-auto py-1 py-lg-0">
                 <p>Use the input below to check your refund status.</p>
-                <form method="GET" action="{% url 'order_status' %}">
+                <form method="GET" action="{% url 'refund_status' %}">
                     
                     {{ form|crispy }}
                     <div class="input-group ">
