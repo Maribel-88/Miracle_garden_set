@@ -42,7 +42,7 @@
                         <span class="small display:none"><a href="{% url 'order_refund' %}">Refund Status</a> | </span>
                         {{ orderlists|length }} Order 
                     {% elif search_term %}
-                    <span class="small display:none"><a href="{% url 'order_status' %}">Order Status</a> | </span>
+                    <span class="small display:none"><a href="{% url 'order_refund' %}">Order Status</a> | </span>
                         {{ orderlists|length }} Order found for <strong>"{{ search_term }}"</strong>{% endif %}
                 </p>
             </div>
@@ -70,18 +70,25 @@
                                                 </a>
                                             </td>
                                             <td>{{ order.date }}</td>
-                                            {% if order.canceled or returned_status == True %}
+                                           {% if order.returned_status %}
                                             <td>
                                                 <div>
-                                                    <p>Your refund is on process.We will email you <br> 
-                                                        once your refund has been fulfilled.</p>
+                                                    <p>Your refund is on process.We will email<br> 
+                                                        you once your refund has been fulfilled.</p>
+                                                </div>
+                                            </td>
+                                            {% elif order.canceled_order %}
+                                            <td>
+                                                <div>
+                                                    <p>We are attempting to cancel your order. We will email you <br> 
+                                                        once we have an update regarding your request.</p>
                                                 </div>
                                             </td>
                                             {% else %}
                                             <td>
                                                 <div>
-                                                    <p>We are attempting to cancel your order. We will email you <br> 
-                                                        once we have an update regarding your request.</p>
+                                                    <p>Your order is being prepared for dispatched. We will email<br> 
+                                                       you once we have an update regarding your request.</p>
                                                 </div>
                                             </td>
                                             {% endif %}
