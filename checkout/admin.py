@@ -39,7 +39,8 @@ class Lists_orderAdmin(admin.ModelAdmin):
         'date',
         'dispatched_status',
         'tracking_number',
-        
+        'canceled_order',
+        'returned_status',
     )
 
 admin.site.register(Lists_order,Lists_orderAdmin)    
