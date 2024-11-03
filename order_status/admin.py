@@ -7,7 +7,7 @@ class Lists_refundAdmin(admin.ModelAdmin):
         'order_number',
         'full_name',
         'email',
-        'order_to_be_cancelled', 
+        'canceled_order', 
         'date',
         'refund_status',
         'refund_number',
