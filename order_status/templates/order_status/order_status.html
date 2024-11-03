@@ -35,13 +35,20 @@
                     </div>
                 </form>
             </div>
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> d21feba61b25fe78c3a596eeab3096a571e001ab
             <div class="col-12 col-md-6 order-md-first">
                 <p class="text-muted mt-3 text-center text-md-left">
                     {% if search_term  == 'None_None' %}
                         <span class="small display:none"><a href="{% url 'order_status' %}">Order Status</a> | </span>
                         {{ orderlists|length }} Order 
+<<<<<<< HEAD
                     
+=======
+>>>>>>> d21feba61b25fe78c3a596eeab3096a571e001ab
                     {% elif search_term %}
                     <span class="small display:none"><a href="{% url 'order_status' %}">Order Status</a> | </span>
                         {{ orderlists|length }} Order found for <strong>"{{ search_term }}"</strong>{% endif %}

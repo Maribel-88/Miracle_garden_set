@@ -1,8 +1,8 @@
 from django.shortcuts import render,redirect,reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from checkout.models import Order, Lists_order 
-from .models import Lists_refund
+from checkout.models import Order, Lists_order
+
 # Create your views here.
 
 
@@ -60,6 +60,5 @@ def refund_status(request):
         'search_term': query,
     }
     return render(request, 'order_status/refund_status.html', context)
-
 
     

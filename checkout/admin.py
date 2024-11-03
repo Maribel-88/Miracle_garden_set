@@ -34,7 +34,11 @@ class Lists_orderAdmin(admin.ModelAdmin):
         'order_number',
         'user_profile',
         'full_name',
+<<<<<<< HEAD
         'email',
+=======
+        'email', 
+>>>>>>> d21feba61b25fe78c3a596eeab3096a571e001ab
         'date',
         'dispatched_status',
         'tracking_number',

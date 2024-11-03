@@ -125,6 +125,7 @@ WSGI_APPLICATION = 'miracle_garden_set.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+<<<<<<< HEAD
 #if 'DATABASE_URL' in os.environ:
 DATABASES = {
     'default': dj_database_url.parse(' postgres://uasueu2wiv8:JHZskScchNBL@ep-gentle-mountain-a23bxz6h-pooler.eu-central-1.aws.neon.tech/vest_lived_juicy_558888')
@@ -136,6 +137,20 @@ DATABASES = {
 #             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #         }
 #     }
+=======
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+            'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+  
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+>>>>>>> d21feba61b25fe78c3a596eeab3096a571e001ab
 
 
 # Password validation

@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+und{% extends "base.html" %}
 {% load static %}
 
 {% block page_header %}
@@ -36,13 +36,21 @@
                 </form>
             </div>
             
+<<<<<<< HEAD
             <div class="col-12 col-md-6 order-md-first">
+=======
+             <div class="col-12 col-md-6 order-md-first">
+>>>>>>> d21feba61b25fe78c3a596eeab3096a571e001ab
                 <p class="text-muted mt-3 text-center text-md-left">
                     {% if search_term  == 'None_None' %}
                         <span class="small display:none"><a href="{% url 'order_refund' %}">Refund Status</a> | </span>
                         {{ orderlists|length }} Order 
                     {% elif search_term %}
+<<<<<<< HEAD
                     <span class="small display:none"><a href="{% url 'order_status' %}">Order Status</a> | </span>
+=======
+                    <span class="small display:none"><a href="{% url 'order_refund' %}">Order Status</a> | </span>
+>>>>>>> d21feba61b25fe78c3a596eeab3096a571e001ab
                         {{ orderlists|length }} Order found for <strong>"{{ search_term }}"</strong>{% endif %}
                 </p>
             </div>
@@ -69,8 +77,13 @@
                                                     {{ order.order_number|truncatechars:6 }}
                                                 </a>
                                             </td>
+<<<<<<< HEAD
                                             <td>{{ order.date }} </td>
                                             {% if order.returned_status %}
+=======
+                                            <td>{{ order.date }}</td>
+                                           {% if order.returned_status %}
+>>>>>>> d21feba61b25fe78c3a596eeab3096a571e001ab
                                             <td>
                                                 <div>
                                                     <p>Your refund is on process.We will email<br> 
