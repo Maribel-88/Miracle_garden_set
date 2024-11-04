@@ -11,7 +11,10 @@ body {
     padding-bottom: 100px; 
 }
 
-
+a:hover {
+    color: hotpink;
+}
+  
 #topnav {
     background: linear-gradient(to bottom right, red, yellow);
     padding-top: 20px;
@@ -67,9 +70,9 @@ body {
 
 
 .shop-now-button {
-    background: black;
+    background: #8c240a;
     color: white;
-    min-width: 260px;
+    min-width: 230px;
 }
 
 .btn-grey {
@@ -92,7 +95,7 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: #8c240a;
     color: white;
 }
 
@@ -203,9 +206,12 @@ a.category-badge > span.badge:hover {
 }
 
 .shoplink {
-    padding-top: 100px;
+    padding-top: 200px;
 }
 
+.welcomelink {
+    padding-top: 100px;
+}
 
 /* -------------------------------------------- bootstrap toasts */
 
@@ -369,6 +375,10 @@ a.category-badge > span.badge:hover {
     border-radius: 0;
 }
 
+.header-container {
+    padding-top: 464px;
+}
+
 
 /* -------------------------------- Media Queries */
 
@@ -390,7 +400,7 @@ a.category-badge > span.badge:hover {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 264px;
     }
 
     .table-responsive  {
@@ -482,6 +492,10 @@ a.category-badge > span.badge:hover {
         font-size: 2rem;
     }	
 
+    #imgBorder {
+        margin-bottom: 100px;
+    }
+
 }
 /*-----------------Social Media Icons ------------*/
     
@@ -551,4 +565,5 @@ a.category-badge > span.badge:hover {
     background-color: #8c240a;
     border-style: none;
     align-items: center;
+    padding-top: 10px;
   }
