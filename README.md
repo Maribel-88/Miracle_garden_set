@@ -2,10 +2,9 @@
 
 ## **Miracle Garden Set**
  A website project created to showcase what I have learnt so far from course modules.
- This dynamic website is composed of eight pages , the Home page, About, Contact, Deals, Refund, Terms, Order Status  and the Cart/basket page.
- In all the pages there are buttons that customers can click in order to go the the desired page. This website is built with customer in mind.
- I am looking for the web visitors to be able to view my products and be able to instantly placed there order. Phones numbers and email of the owner 
- is available for easy reached and to be able to process their order quicker or even to follow-up the orders.
+ This is our final project for this course. Im very thankful I was able to reached this far with this course.
+ To my evaluator, this project is not only a representation of what I have learnt from this course but I should say this
+ is the representation of my eagerness to learn this subject matter. I hope to continue on learning more in the future. 
 
  ### [Home Page](https://miraclegarden-set-90121c199093.herokuapp.com/)
  In the home page , I have implemented some bootstrap , HTML , CSS and small bit of Javascript in order to
@@ -123,8 +122,58 @@ This page will pop up upon successful payment of customer's order. THis page con
 <div align="center"><img width="700" alt="CSS" src="https://github.com/user-attachments/assets/3b92f760-e438-4466-b66b-5128ded2e29c"></div>
 
 - Lighthouse Desktop Performance Test
-- <div align="center"><img width="700" alt="Lighthouse Desktop" src="https://github.com/user-attachments/assets/12b95ebd-be09-4200-b357-ff2f9b969c91"></div>
+ <div align="center"><img width="700" alt="Lighthouse Desktop" src="https://github.com/user-attachments/assets/12b95ebd-be09-4200-b357-ff2f9b969c91"></div>
+
+- Lighthouse Mobile Performance Test
+ <div align="center"><img width="700" alt="Lighthouse Mobile Test" src="https://github.com/user-attachments/assets/8fc9a7af-981f-46fe-be1d-8c5f1df8d118"></div>
 ---
 
+## Testing Section Requirements
 
 
+| Feature | Expectation | Action | Result |
+| :---    | :---        | :---   | :---   |
+| Logo Navbar Button | When clicked will take you to home page | Clicked Home on the Nav bar or logo name | Home page opened when clicked|
+| Shop Now button | When clicked will open the main products page | Click ALL GARDEN SETS button on the Nav bar | Dropdown sorting options will show|
+| Dropdow sort button | By Price ,When click will open the page with sorted products by price | By Rating ,When click will open the page with sorted products by rating| Sorted Product Page
+| Dropdow sort button | By Category ,When click will open the page with sorted products by category |All Garden Sets button ,When click will return all products|Sorted Product Page
+| Order Satatus button | When clicked will open the Order Satatus | Clicked Order Satatus button on the Nav bar | Order Satatus page opened when clicked|
+| Cart button | When clicked will open the Cart page | Clicked Cart button on the Nav bar | Cart page opened when clicked|
+| Refund Status | When clicked will open the Refund page | Clicked Refund Policy Link on the bottom of the page | Refund Policy page opened when clicked|
+| Terms Link | When clicked will open the Terms page | Use input to search for the status of your request | Click submit and result will return if any|
+| Scroll-up button | When clicked will take you to the top of the page | Clicked scroll-up arrow button | Page returned to the top |
+| Minus button | When clicked will decrement the quantity of the selected item quantity | Clicked Minus button | Decremented the quantity of the selected item |
+| Plus button | When clicked will increment the quantity of the selected item quantity | Clicked Minus button | Incremented the quantity of the selected item |
+| Update  button | When clicked will update  the selected item from the cart | if item quantity is 0 , item will be remove from the cart during the update process| Updated item Quantity 
+| Remove button | When clicked will remove  all the selected item from the cart | Clicked clear button | Removed all the selected items from cart|
+| Checkout button | When clicked will open the checkout page from the cart | Clicked checkout button | Fill up the form and click the checkout button , checkout success
+| Keep Shopping Button | When clicked will take you to main page | Clicked Back to main page | Directs to main page|
+
+---
+
+## Deployment
+#### This site was deployed through GitHub and Heroku The steps are as follows:
+- From gitpod terminal login to Heroku by typing heroku login -i (this was in my case because I use API key to login)
+- Push your code to heroku upon successful login.
+- On app setting on heroku connect your github to enable automatic deployment in future commits.
+- Select Main the correct repo.
+- Once the main branch has been selected, the page will automatically refresh with a successful deployment notice.
+ 
+
+  Click to view the live link - **(https://miraclegarden-set-90121c199093.herokuapp.com/)**
+
+
+## Citation of Sources
+Credits
+- CSS
+    - Some of the codes I learnt from watching code institute tutorials.
+- JS
+    - All the codes for creating Stripe payment connection on checkout were all taken from code institute tutorial and materials.
+- Models and some codes were also borrowed from code institute.    
+
+- Media
+    - Images are from my own collections.
+ 
+## Future Features
+Features Left to Implement
+- Looking to create an option to cancel order.
