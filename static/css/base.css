@@ -11,7 +11,10 @@ body {
     padding-bottom: 100px; 
 }
 
-
+a:hover {
+    color: hotpink;
+}
+  
 #topnav {
     background: linear-gradient(to bottom right, red, yellow);
     padding-top: 20px;
@@ -489,6 +492,10 @@ a.category-badge > span.badge:hover {
         font-size: 2rem;
     }	
 
+    #imgBorder {
+        margin-bottom: 100px;
+    }
+
 }
 /*-----------------Social Media Icons ------------*/
     
@@ -558,4 +565,5 @@ a.category-badge > span.badge:hover {
     background-color: #8c240a;
     border-style: none;
     align-items: center;
+    padding-top: 10px;
   }
