@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4">Shopping Bag</h2>
+                <h2 class="logo-font mb-4">Shopping Cart</h2>
                 <hr>
             </div>
         </div>
@@ -40,7 +40,7 @@
                             <tr>
                                 <td class="p-3 w-25">
                                     {% if item.gardenset.image %}
-                                    <img class="img-fluid rounded" src="{{ item.gardenset.image.url }}" alt="{{ item.gardenset.name }}">
+                                    <img class="img-fluid rounded"  src="{{ item.gardenset.image.url }}" alt="{{ item.gardenset.name }}">
                                     {% else %}
                                     <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.gardenset.name }}">
                                     {% endif %}
@@ -50,7 +50,7 @@
                                     <p class="my-0 small text-muted">SKU: {{ item.gardenset.sku|upper }}</p>
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0">${{ item.gardenset.price }}</p>
+                                    <p class="my-0">₱{{ item.gardenset.price }}</p>
                                 </td>
                                 <td class="py-3 w-15">
                                     <form class="form update-form" method="POST" action="{% url 'update_cart' item.item_id %}">
@@ -77,9 +77,6 @@
                                                         </span>
                                                     </button>
                                                 </div>
-                                                {% if item.product.has_sizes %}
-                                                    <input type="hidden" name="product_size" value="{{ item.size }}">
-                                                {% endif %}
                                             </div>
                                         </div>
                                     </form>
@@ -87,18 +84,18 @@
                                     <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0">${{ item.gardenset.price | calc_subtotal:item.quantity }}</p>
+                                    <p class="my-0">₱{{ item.gardenset.price | calc_subtotal:item.quantity }}</p>
                                 </td>
                             </tr>
                         {% endfor %}
                         <tr>
                             <td colspan="5" class="pt-5 text-right">
-                                <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                                <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                                <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                                <h6><strong>Cart Total: ₱{{ total|floatformat:2 }}</strong></h6>
+                                <h6>Delivery: ₱{{ delivery|floatformat:2 }}</h6>
+                                <h4 class="mt-4"><strong>Grand Total: ₱{{ grand_total|floatformat:2 }}</strong></h4>
                                 {% if free_delivery_delta > 0 %}
                                     <p class="mb-1 text-danger">
-                                        You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+                                        You could get free delivery by spending just <strong>₱{{ free_delivery_delta }}</strong> more!
                                     </p>
                                 {% endif %}
                             </td>
@@ -111,7 +108,7 @@
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
+                                <a href="{% url 'checkout' %}" class="btn btn-add rounded-0 btn-lg">
                                     <span class="text-uppercase">Secure Checkout</span>
                                     <span class="icon">
                                         <i class="fas fa-lock"></i>

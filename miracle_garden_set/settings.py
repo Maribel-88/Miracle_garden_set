@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
-
+#DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -215,7 +215,7 @@ if 'USE_AWS' in os.environ:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#CSRF_TRUSTED_ORIGINS = ['https://8000-maribel88-miraclegarden-nw9owvv20s3.ws.codeinstitute-ide.net']
+CSRF_TRUSTED_ORIGINS = ['https://8000-maribel88-miraclegarden-nw9owvv20s3.ws.codeinstitute-ide.net']
 
 # Stripe
 FREE_DELIVERY_THRESHOLD = 50

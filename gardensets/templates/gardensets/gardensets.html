@@ -69,7 +69,7 @@
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">${{ gardenset.price }}</p>
+                                            <p class="lead mb-0 text-left font-weight-bold">₱{{ gardenset.price }}</p>
                                             {% if gardenset.category %}
                                             <p class="small mt-1 mb-0">
                                                 <a class="text-muted" href="{% url 'gardensets' %}?category={{ gardenset.category.name}}">
@@ -101,7 +101,7 @@
                                                                         </button>
                                                                     </div>
                                                                     <input class="form-control qty_input" type="number"
-                                                                        name="quantity" value="0" min="" max="99"
+                                                                        name="quantity" value="1" min="1" max="99"
                                                                         data-item_id="{{ gardenset.id }}"
                                                                         id="id_qty_{{ gardenset.id }}">
                                                                     <div class="input-group-append">
